@@ -7,16 +7,8 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
+import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+import {ModalPortal} from 'react-native-modals';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import StackNavigator from './navigation/StackNavigator';
 
@@ -34,6 +26,7 @@ function App(): JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <StackNavigator />
+      <ModalPortal />
     </SafeAreaView>
   );
 }
