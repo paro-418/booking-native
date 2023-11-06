@@ -11,6 +11,7 @@ import SavedScreen from '../screens/SavedScreen';
 import BookingScreen from '../screens/BookingScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SearchScreen from '../screens/SearchScreen';
+import PlacesScreen from '../screens/PlacesScreen';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -83,9 +84,12 @@ function BottomTabs() {
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator
+        screenOptions={{headerShown: false}}
+        initialRouteName="Main">
         <Stack.Screen name="Main" component={BottomTabs} />
         <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Places" component={PlacesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
